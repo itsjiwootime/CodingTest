@@ -1,6 +1,6 @@
 # [level 1] 문자열 다루기 기본 - 12918 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12918) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12918?itm_content=course14743) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 11월 11일 23:20:32
+2025년 11월 11일 23:20:54
 
 ### 문제 설명
 

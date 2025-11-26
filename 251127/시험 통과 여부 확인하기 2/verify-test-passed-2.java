@@ -24,7 +24,7 @@ public class Main {
             }
             if(sum / 4 >= 60){
                 System.out.println("pass");
-                cnt++:
+                cnt++;
             } else {
                 System.out.println("fail");
             }

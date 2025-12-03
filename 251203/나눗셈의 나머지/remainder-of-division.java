@@ -11,9 +11,9 @@ public class Main {
 
         while( A > 1) {
 
-            int num = A % 4;
+            int num = A % B;
             count[num]++;
-            A /= 4;
+            A /= B;
             
 
 

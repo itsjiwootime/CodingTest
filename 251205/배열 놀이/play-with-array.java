@@ -24,14 +24,8 @@ public class Main {
 
             switch(num1) {
                 case 1:
-                    int cnt = 0;
-                    for(int j = 0; j < N; j++){
-                        if(arr[j] == num2){
-                            cnt = j;
-                        }
-
-                    }
-                    System.out.println(cnt+1);
+                    
+                    System.out.println(arr[num2-1]);
                     break;
                 case 2:
                     int idx = -1;

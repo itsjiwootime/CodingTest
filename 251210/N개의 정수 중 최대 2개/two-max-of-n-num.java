@@ -16,22 +16,16 @@ public class Main {
 int max2 = Integer.MIN_VALUE;
 
 
-        for(int i = 0; i < N; i++) {
-            if(arr[i] > max){
-                max = arr[i];
-            }
-        }
+      for (int i = 0; i < N; i++) {
+    if (arr[i] > max) {
+        max2 = max;
+        max = arr[i];
+    } else if (arr[i] > max2 && arr[i] != max) {
+        max2 = arr[i];
+    }
+}
 
-        for(int i = 0; i < N; i++) {
-            if(arr[i] == max){
-                continue;
-            }
-            if(arr[i] > max2){
-                max2 = arr[i];
-            }
-        }
-
-        System.out.println(max+" "+max2);
+System.out.println(max + " " + max2);
 
 
 

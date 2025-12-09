@@ -12,8 +12,9 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int max = arr[0];
-        int max2 = arr[0];
+        int max = Integer.MIN_VALUE;
+int max2 = Integer.MIN_VALUE;
+
 
         for(int i = 0; i < N; i++) {
             if(arr[i] > max){

@@ -1,11 +1,9 @@
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt();
-
         int[] arr = new int[N];
 
         for(int i = 0; i < N; i++) {
@@ -13,22 +11,36 @@ public class Main {
         }
 
         int max = Integer.MIN_VALUE;
-int max2 = Integer.MIN_VALUE;
 
+        // 최댓값 찾기
+        for(int i = 0; i < N; i++) {
+            if(arr[i] > max) {
+                max = arr[i];
+            }
+        }
 
-      for (int i = 0; i < N; i++) {
-    if (arr[i] > max) {
-        max2 = max;
-        max = arr[i];
-    } else if (arr[i] > max2 && arr[i] != max) {
-        max2 = arr[i];
-    }
-}
+        // 최댓값 개수 세기
+        int count = 0;
+        for(int i = 0; i < N; i++) {
+            if(arr[i] == max) {
+                count++;
+            }
+        }
 
-System.out.println(max + " " + max2);
+        int max2 = Integer.MIN_VALUE;
 
+        if(count >= 2) {
+            // 최댓값이 2개 이상이면 max2는 max
+            max2 = max;
+        } else {
+            // 최댓값 제외한 값 중에서 가장 큰 값 찾기
+            for(int i = 0; i < N; i++) {
+                if(arr[i] < max && arr[i] > max2) {
+                    max2 = arr[i];
+                }
+            }
+        }
 
-
-
+        System.out.println(max + " " + max2);
     }
 }

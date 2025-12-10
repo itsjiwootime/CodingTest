@@ -27,7 +27,7 @@ public class Main {
 
         System.out.printf("%.1f %.1f %.1f %.1f \n",(colSum[0]/2.0) ,(colSum[1]/2), colSum[2]/2, colSum[3]/2);
 
-        System.out.print(totalseum / 8); 
+        System.out.printf("%.1f",totalseum / 8); 
 
 
     }

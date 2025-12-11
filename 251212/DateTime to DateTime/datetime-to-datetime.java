@@ -14,8 +14,10 @@ public class Main {
 
         if(end < start){
             System.out.println(-1);
+        }else{
+             System.out.println(end-start);
         }
-        System.out.println(end-start);
+      
 
         
     }

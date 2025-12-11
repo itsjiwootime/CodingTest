@@ -9,13 +9,20 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        Arrays.sort(arr);
 
-        System.out.print(arr[0]+" ");
+        int i = 1;
+        int j = 0;
 
-      
-        for(int j = 1; j <= n/2; j++) {
-            System.out.print(arr[j]+" ");
+        while(true) {
+            if(j == (n/2)+1){
+                break;
+            }
+            Arrays.sort(arr,1,i);
+
+            System.out.print(arr[j] + " ");
+
+            i += 2;
+            j++;
         }
         
         // Please write your code here.

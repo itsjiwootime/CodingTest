@@ -8,7 +8,7 @@ public class Main {
         int[] x2 = new int[n];
         int[] y2 = new int[n];
 
-        int[][] arr = new int[201][201];
+        int[][] arr = new int[200][200];
         int OFFSET = 100;
 
         for (int i = 0; i < n; i++) {
@@ -17,8 +17,8 @@ public class Main {
             x2[i] = sc.nextInt();
             y2[i] = sc.nextInt();
 
-            for(int h = x1[i]; h < x2[i]; h++){
-                for( int j = y1[i]; j < y2[i]; j++) {
+            for(int h = x1[i]+OFFSET; h < x2[i] + OFFSET; h++){
+                for( int j = y1[i] + OFFSET; j < y2[i] + OFFSET; j++) {
                     arr[h][j]++;
                 }
             }

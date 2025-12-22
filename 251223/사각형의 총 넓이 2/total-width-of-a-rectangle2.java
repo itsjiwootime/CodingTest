@@ -8,7 +8,7 @@ public class Main {
         int[] x2 = new int[n];
         int[] y2 = new int[n];
 
-        int[][] arr = new int[200][200];
+        int[][] arr = new int[201][201];
         int OFFSET = 100;
 
         for (int i = 0; i < n; i++) {

@@ -8,12 +8,14 @@ public class Main {
 
         int[][] arr = new int[200][200];
 
+        int OFFSET = 100;
+
         for (int i = 0; i < n; i++) {
             x[i] = sc.nextInt();
             y[i] = sc.nextInt();
 
-            for(int j = x[i]; j < x[i] + 8; j++) {
-                for(int h = y[i]; h < y[i] + 8; h++){
+            for(int j = x[i]+ OFFSET; j < x[i] + 8 +OFFSET; j++) {
+                for(int h = y[i] + OFFSET; h < y[i] + 8 + OFFSET; h++){
                     arr[j][h]++;
                 }
             }

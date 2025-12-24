@@ -9,8 +9,8 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int max = 0;
-        int cnt = 1;
+        int max = 1;
+        int cnt = 0;
         // Please write your code here.
 
         for(int i = 0; i < n-1; i++) {

@@ -14,13 +14,11 @@ public class Main {
         int max = 1;
         for (int i = 0; i < n -1; i++){
             if(arr[i] > t){
-                if(arr[i] < arr[i+1]){
-                    cnt++;
-                }else{
-                    cnt = 1;
-                }
+                cnt++;
 
                 max = Math.max(max,cnt);
+            }else{
+                cnt = 0;
             }
         }
 

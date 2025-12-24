@@ -10,7 +10,7 @@ public class Main {
         }
 
         int max = 0;
-        int cnt = 0;
+        int cnt = 1;
         // Please write your code here.
 
         for(int i = 0; i < n-1; i++) {

@@ -52,9 +52,21 @@ public class Main {
             }
         }
 
+        int totalTime = Math.max(currentA, currentB);
+
+
+for (int i = currentA; i < totalTime; i++) {
+    A[i] = A[i - 1];
+}
+
+
+for (int i = currentB; i < totalTime; i++) {
+    B[i] = B[i - 1];
+}
+
         int cnt = 0;
 
-        for(int i = 2; i < 1000001; i++){
+        for(int i = 1; i < totalTime; i++){
             if( A[i] == B[i] ){
                 if( A[i-1] != B[i-1]){
                     cnt++;

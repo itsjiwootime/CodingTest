@@ -16,9 +16,9 @@ public class Main {
             char c = s.charAt(i);
 
             if( c == 'L'){
-                dir = (dir - 1) % 4;  
+                dir = (dir  -1 + 4) % 4;  
             }else if( c == 'R'){
-                dir = (dir + 3) % 4; 
+                dir = (dir + 1 + 4) % 4; 
             }else{
 
                 x += dx[dir];

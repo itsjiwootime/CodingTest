@@ -18,7 +18,7 @@ public class Main {
             if( c == 'L'){
                 dir = (dir - 1) % 4;  
             }else if( c == 'R'){
-                dir = (dir + 1) % 4; 
+                dir = (dir + 3) % 4; 
             }else{
 
                 x += dx[dir];

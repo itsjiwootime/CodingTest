@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
-public class Best33Location {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        // 1. 입력 받기
         int n = sc.nextInt();
         int[][] grid = new int[n][n];
+        
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 grid[i][j] = sc.nextInt();
@@ -15,27 +14,27 @@ public class Best33Location {
 
         int maxCoins = 0;
 
-        // 2. 모든 가능한 3x3 격자 위치 탐색 (Brute Force)
-        // 시작점 (i, j)는 n-3까지만 가능
+        // 1. $3 \times 3$ 격자의 왼쪽 상단 모서리 (i, j)를 기준으로 탐색합니다.
+        // i와 j는 n - 3까지만 이동해야 격자를 벗어나지 않습니다.
         for (int i = 0; i <= n - 3; i++) {
             for (int j = 0; j <= n - 3; j++) {
-                int currentCoins = countCoins(grid, i, j);
-                maxCoins = Math.max(maxCoins, currentCoins);
+                
+                // 2. 현재 위치 (i, j)에서 $3 \times 3$ 범위 내 동전 개수를 셉니다.
+                int currentSum = 0;
+                for (int row = i; row < i + 3; row++) {
+                    for (int col = j; col < j + 3; col++) {
+                        currentSum += grid[row][col];
+                    }
+                }
+
+                // 3. 최댓값을 갱신합니다.
+                if (currentSum > maxCoins) {
+                    maxCoins = currentSum;
+                }
             }
         }
 
-        // 3. 결과 출력
+        // 4. 최종 결과 출력
         System.out.println(maxCoins);
-    }
-
-    // 특정 위치 (row, col)을 좌상단으로 하는 3x3 영역의 동전 수를 세는 메서드
-    private static int countCoins(int[][] grid, int row, int col) {
-        int count = 0;
-        for (int i = row; i < row + 3; i++) {
-            for (int j = col; j < col + 3; j++) {
-                count += grid[i][j];
-            }
-        }
-        return count;
     }
 }

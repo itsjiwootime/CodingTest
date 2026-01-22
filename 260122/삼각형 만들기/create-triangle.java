@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,30 +8,24 @@ public class Main {
         int[] x = new int[n];
         int[] y = new int[n];
 
+        HashMap<Integer, Integer> cntX = new HashMap<>();
+        HashMap<Integer, Integer> cntY = new HashMap<>();
+
         for (int i = 0; i < n; i++) {
             x[i] = sc.nextInt();
             y[i] = sc.nextInt();
+
+            cntX.put(x[i], cntX.getOrDefault(x[i], 0) + 1);
+            cntY.put(y[i], cntY.getOrDefault(y[i], 0) + 1);
         }
 
-        int count = 0;
-
-        
+        long ans = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                for (int k = j + 1; k < n; k++) {
-
-                    // 세 점이 일직선인지 확인
-                    int area = x[i] * (y[j] - y[k])
-                             + x[j] * (y[k] - y[i])
-                             + x[k] * (y[i] - y[j]);
-
-                    if (area != 0) {
-                        count++; // 삼각형 가능
-                    }
-                }
-            }
+            long vx = cntX.get(x[i]) - 1; // 같은 x에 있는 다른 점 개수
+            long vy = cntY.get(y[i]) - 1; // 같은 y에 있는 다른 점 개수
+            ans += vx * vy;
         }
 
-        System.out.println(count);
+        System.out.println(ans);
     }
 }
